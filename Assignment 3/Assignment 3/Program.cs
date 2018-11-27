@@ -24,17 +24,19 @@ namespace Assignment_3
     public class FileSystem
     {
         private Node root;
+        private int fileCount;
         // Creates a file system with a root directory
         public FileSystem()
         {
-
+            root = new Node("/", null, null, null);
+            fileCount = 0;
         }
 
         // Adds a file at the given address
         // Returns false if the file already exists or the path is undefined; true otherwise
         public bool AddFile(string address)
         {
-
+            
         }
 
         // Removes the file at the given address
@@ -57,16 +59,20 @@ namespace Assignment_3
         {
 
         }
-
+        */
         // Returns the number of files in the file system
         public int NumberFiles()
         {
-
+            return fileCount;
         }
 
-        // Prints the directories in a pre-order fashion along with their files
+        /*// Prints the directories in a pre-order fashion along with their files
         public void PrintFileSystem()
         {
+            void Traverse(Node current, bool a)
+            {
+                Console.WriteLine();
+            }
 
         }*/
     }
