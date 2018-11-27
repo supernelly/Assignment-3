@@ -19,7 +19,8 @@ namespace Assignment_3
             leftMostChild = left;
             rightSibling = right;
         }
-    }    
+    }
+    
     public class FileSystem
     {
         private Node root;
