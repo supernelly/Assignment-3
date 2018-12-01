@@ -61,7 +61,7 @@ namespace Assignment_3
             fileCount = 0;
         }
 
-        public List<string> parseAddress(string address)
+        private List<string> parseAddress(string address)
         {
             List<string> location = new List<string>();
             string temp = "";
@@ -82,10 +82,11 @@ namespace Assignment_3
                 }
                 else
                     temp += c;
-            }
-            location.Add(temp);
 
-            return location;
+            }
+
+             location.Add(temp);
+             return location;
         }
         
         // Adds a file at the given address
@@ -208,12 +209,12 @@ namespace Assignment_3
         {
             List<string> parsedAddress = parseAddress(address);
 
-            Node current = root.Left;
-
             if (parsedAddress[0] != root.Directory)
                 return false;
             else
             {
+                Node current = root.Left;
+
                 if (parsedAddress.Count == 2) // If address is the root
                 {
                     if (current == null)
@@ -222,8 +223,6 @@ namespace Assignment_3
                         return true;
                     }
                 }
-                else if (current == null)
-                    return false;
 
                 for (int i = 1; i < (parsedAddress.Count - 1); i++)
                 {
@@ -234,16 +233,13 @@ namespace Assignment_3
                             if (i < (parsedAddress.Count - 3))
                                 current = current.Left;
                             else
-                                break;
+                                goto Current;
                         }
-
-                        if (i >= (parsedAddress.Count - 3))
-                            break;
-
                         current = current.Right;
                     }
                 }
 
+                Current:
                 string newDirectory = parsedAddress.Last();
 
                 if (current.Left == null) // If there is no subdirectories
@@ -320,16 +316,13 @@ namespace Assignment_3
                             if (i < (parsedAddress.Count - 3))
                                 current = current.Left;
                             else
-                                break;
+                                goto Current;
                         }
-
-                        if (i >= (parsedAddress.Count - 3))
-                            break;
-
                         current = current.Right;
                     }
                 }
 
+                Current:
                 Node currentDir = current.Left;
 
                 while (currentDir != null) // This loop goes to the directory to be removed
@@ -360,12 +353,13 @@ namespace Assignment_3
         {
             void Traverse(Node current, bool a)
             {
+                Console.WriteLine();
                 Console.WriteLine(current.Directory);
 
                 if (current.File != null)
                 {
                     foreach (string file in current.File)
-                        Console.WriteLine("  ./" + file);
+                        Console.WriteLine("     ./" + file);
                 }
 
                 if (current.Left != null)
@@ -375,11 +369,10 @@ namespace Assignment_3
                     Traverse(current.Right, false);
 
                 if (a == true)
-                    Console.WriteLine("reeeeeeeeeeeeeeeeee");
+                    Console.WriteLine("");
             }
 
             Traverse(root, true);
-
         }
     }
 }
