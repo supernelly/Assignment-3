@@ -372,9 +372,9 @@ namespace Assignment_3
                     Traverse(current.Left, false);
                 else if (current.Right != null)
                     Traverse(current.Right, false)
-                else if (a == true)
-                    Console.WriteLine("reeeeeeeeeeeeeeeeee");
 
+                if (a == true)
+                    Console.WriteLine("reeeeeeeeeeeeeeeeee");
             }
 
             Traverse(root, true);
