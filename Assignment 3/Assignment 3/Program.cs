@@ -370,8 +370,9 @@ namespace Assignment_3
 
                 if (current.Left != null)
                     Traverse(current.Left, false);
-                else if (current.Right != null)
-                    Traverse(current.Right, false)
+
+                if (current.Right != null)
+                    Traverse(current.Right, false);
 
                 if (a == true)
                     Console.WriteLine("reeeeeeeeeeeeeeeeee");
