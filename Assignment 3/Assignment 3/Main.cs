@@ -23,30 +23,49 @@ namespace Assignment_3
             a.AddDirectory("/Hello/General");
             a.AddDirectory("/Hello/There/Kenobi");
             a.AddDirectory("/Hello/General/Prequel");
-            a.AddDirectory("/Hello/There/Meme");
 
             a.AddFile("/You");
             a.AddFile("/Hello/Are");
             a.AddFile("/Hello/There/General/A");
             a.AddFile("/Hello/There/Kenobi/Bold");
-            a.AddFile("/Hello/General/Prequel/One");
+
             a.PrintFileSystem();
-            //teesting remove file that is valid 
-            bool test = a.RemoveFile("/You");
-            Console.WriteLine("testing remove file : You : " + test);
+
+            // Testing adding directory
+            bool test = a.AddDirectory("/Hello/There/Meme");
+            Console.WriteLine("Testing adding directory : You : " + test);
             a.PrintFileSystem();
-            // testing remove directory that is valid 
+
+            // Testing adding file
+            test = a.AddFile("/Hello/General/Prequel/One");
+            Console.WriteLine("Testing adding file : You : " + test);
+            a.PrintFileSystem();
+
+            // Testing remove file that is valid 
+            test = a.RemoveFile("/You");
+            Console.WriteLine("Testing remove file : You : " + test);
+            a.PrintFileSystem();
+
+            // Testing remove directory that is valid 
              test = a.RemoveDirectory("/Hello/There/Meme");
-            Console.WriteLine("testing remove Directory : Meme : " + test);
+            Console.WriteLine("Testing remove Directory : Meme : " + test);
             a.PrintFileSystem();
-            // testing remove file that is not valid 
+
+            // Testing remove file that is not valid 
             test = a.RemoveFile("/it");
-            Console.WriteLine("testing remove invalid file : it : " + test);
+            Console.WriteLine("Testing remove invalid file : it : " + test);
             a.PrintFileSystem();
-            //testing to remove directory that is not valid
+
+            // Testing to remove directory that is not valid
             test = a.RemoveDirectory("/Hello/Mike");
-            Console.WriteLine("testing remove invalid Directory : Mike : " + test);
+            Console.WriteLine("Testing remove invalid Directory : Mike : " + test);
             a.PrintFileSystem();
+
+            // Testing to add file that is not valid
+            test = a.AddFile("/Bye/There");
+            Console.WriteLine("Testing add invalid file : There : " + test);
+            a.PrintFileSystem();
+
             Console.ReadKey();
         }
     }

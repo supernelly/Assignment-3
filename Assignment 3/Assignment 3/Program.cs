@@ -351,28 +351,28 @@ namespace Assignment_3
         // Prints the directories in a pre-order fashion along with their files
         public void PrintFileSystem()
         {
-            void Traverse(Node current, bool a)
+            void Traverse(Node current, bool a, string s)
             {
-                Console.WriteLine();
-                Console.WriteLine(current.Directory);
+                Console.WriteLine(s + current.Directory);
 
                 if (current.File != null)
                 {
                     foreach (string file in current.File)
-                        Console.WriteLine("     ./" + file);
+                        Console.WriteLine(s + " L /" + file);
                 }
 
                 if (current.Left != null)
-                    Traverse(current.Left, false);
+                    Traverse(current.Left, false, s + "  ");
 
                 if (current.Right != null)
-                    Traverse(current.Right, false);
+                    Traverse(current.Right, false, s + "  ");
 
                 if (a == true)
                     Console.WriteLine("");
             }
 
-            Traverse(root, true);
+            string space = "";
+            Traverse(root, true, space);
         }
     }
 }

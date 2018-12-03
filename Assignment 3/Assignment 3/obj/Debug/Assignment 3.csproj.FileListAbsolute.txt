@@ -5,3 +5,10 @@ C:\Users\Brand\Desktop\COIS 2020H\Assignment-3-master\Assignment-3-master\Assign
 C:\Users\Brand\Desktop\COIS 2020H\Assignment-3-master\Assignment-3-master\Assignment 3\Assignment 3\obj\Debug\Assignment 3.exe
 C:\Users\Brand\Desktop\COIS 2020H\Assignment-3-master\Assignment-3-master\Assignment 3\Assignment 3\obj\Debug\Assignment 3.pdb
 C:\Users\Brand\Desktop\COIS 2020H\Assignment-3-master\Assignment-3-master\Assignment 3\Assignment 3\obj\Debug\Assignment 3.csprojResolveAssemblyReference.cache
+C:\Users\nelso\Documents\GitHub\Assignment-3\Assignment 3\Assignment 3\bin\Debug\Assignment 3.exe.config
+C:\Users\nelso\Documents\GitHub\Assignment-3\Assignment 3\Assignment 3\bin\Debug\Assignment 3.exe
+C:\Users\nelso\Documents\GitHub\Assignment-3\Assignment 3\Assignment 3\bin\Debug\Assignment 3.pdb
+C:\Users\nelso\Documents\GitHub\Assignment-3\Assignment 3\Assignment 3\obj\Debug\Assignment 3.csprojAssemblyReference.cache
+C:\Users\nelso\Documents\GitHub\Assignment-3\Assignment 3\Assignment 3\obj\Debug\Assignment 3.csproj.CoreCompileInputs.cache
+C:\Users\nelso\Documents\GitHub\Assignment-3\Assignment 3\Assignment 3\obj\Debug\Assignment 3.exe
+C:\Users\nelso\Documents\GitHub\Assignment-3\Assignment 3\Assignment 3\obj\Debug\Assignment 3.pdb
