@@ -30,7 +30,22 @@ namespace Assignment_3
             a.AddFile("/Hello/There/General/A");
             a.AddFile("/Hello/There/Kenobi/Bold");
             a.AddFile("/Hello/General/Prequel/One");
-
+            a.PrintFileSystem();
+            //teesting remove file that is valid 
+            bool test = a.RemoveFile("/You");
+            Console.WriteLine("testing remove file : You : " + test);
+            a.PrintFileSystem();
+            // testing remove directory that is valid 
+             test = a.RemoveDirectory("/Hello/There/Meme");
+            Console.WriteLine("testing remove Directory : Meme : " + test);
+            a.PrintFileSystem();
+            // testing remove file that is not valid 
+            test = a.RemoveFile("/it");
+            Console.WriteLine("testing remove invalid file : it : " + test);
+            a.PrintFileSystem();
+            //testing to remove directory that is not valid
+            test = a.RemoveDirectory("/Hello/Mike");
+            Console.WriteLine("testing remove invalid Directory : Mike : " + test);
             a.PrintFileSystem();
             Console.ReadKey();
         }
